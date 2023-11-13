@@ -5,8 +5,7 @@ This Terraform configuration can be used to deploy Ubuntu LTS instances to VMWar
 
 .Prerequisites
 
->>> NEED TO MODIFY THE URL TO 22.04.03
-* Download the https://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.ova[Ubuntu 20.04 Server cloud image]
+* Download the https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.ova[Ubuntu 22.04 Server cloud image]
 * Upload the OVA image to your vSphere environment. Select the thin provisioned disk format if your storage system supports thin provisioning. and convert it to template.
 
 NOTE: Select the thin provisioning disk format if your storage system supports it.
@@ -21,7 +20,7 @@ IMPORTANT: Do not power on the virtual machine prior to converting to template. 
 * Review the main.tf, variables.tf and templates/userdata.yml files to customize the configuration to suite your needs.
 * Create a terraform.tfvars file to enter your vSphere environment details and virtual machine settings. Please see an example below for convenience.
 
-Install Terraform on M1 Mac
+.Install Terraform on M1 Mac
 
 [source, bash]
 brew uninstall terraform
