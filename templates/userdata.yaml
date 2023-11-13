@@ -30,8 +30,8 @@ write_files:
   owner: root
   content: |
     net.ipv6.conf.ens192.disable_ipv6 = 1
-
 runcmd:
 - netplan apply
+- systemctl restart systemd-sysctl
 - apt update
 - apt upgrade -y
