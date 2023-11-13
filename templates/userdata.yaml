@@ -10,6 +10,7 @@ users:
 
 write_files:
 - path: /etc/netplan/50-cloud-init.yaml
+  permissions: '0600'
   content: |
     network:
       version: 2
@@ -26,7 +27,7 @@ write_files:
           nameservers:
             addresses: ${nameservers}
 - path: /etc/sysctl.d/10-disable-ipv6.conf
-  permissions: 0644
+  permissions: '0644'
   owner: root
   content: |
     net.ipv6.conf.ens192.disable_ipv6 = 1
