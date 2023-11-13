@@ -21,6 +21,16 @@ IMPORTANT: Do not power on the virtual machine prior to converting to template. 
 * Review the main.tf, variables.tf and templates/userdata.yml files to customize the configuration to suite your needs.
 * Create a terraform.tfvars file to enter your vSphere environment details and virtual machine settings. Please see an example below for convenience.
 
+Install Terraform on M1 Mac
+
+[source, bash]
+brew uninstall terraform
+brew install tfenv
+TFENV_ARCH=amd64 tfenv install 1.6.3
+tfenv use 1.6.3
+
+
+
 [source, bash]
 ----
 cat << EOF > terraform.tfvars
