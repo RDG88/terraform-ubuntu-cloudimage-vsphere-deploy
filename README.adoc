@@ -1,10 +1,11 @@
 
-= Deploy Ubuntu 20.04 LTS (cloud image) to vSphere with Terraform
+= Deploy Ubuntu 22.04 LTS (cloud image) to vSphere with Terraform
 
 This Terraform configuration can be used to deploy Ubuntu LTS instances to VMWare vSphere environment from an Ubuntu Cloud Image template. It includes a cloud-init file template that can be further customized to satisfy your requirements.
 
 .Prerequisites
 
+>>> NEED TO MODIFY THE URL TO 22.04.03
 * Download the https://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.ova[Ubuntu 20.04 Server cloud image]
 * Upload the OVA image to your vSphere environment. Select the thin provisioned disk format if your storage system supports thin provisioning. and convert it to template.
 
